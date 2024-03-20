@@ -11,7 +11,7 @@ import {
 } from '@react-navigation/native';
 import {useRecoilValue, useSetRecoilState} from 'recoil';
 import {counterState} from '@/atoms/counterState';
-import {useCart} from '@/hooks/useCartState';
+import {useCart} from '@/hooks/useCart';
 
 type FloatingAddToCartProps = {
   data: ProductItemProps;

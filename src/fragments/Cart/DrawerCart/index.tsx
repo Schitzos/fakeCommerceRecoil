@@ -5,7 +5,7 @@ import TextView from '@/components/TextView';
 import CartItemView from '../CartItemView';
 import ButtonView from '@/components/Button';
 import {styles} from './styles';
-import {useCart} from '@/hooks/useCartState';
+import {useCart} from '@/hooks/useCart';
 import {cartState} from '@/atoms/cartState';
 import {useRecoilValue} from 'recoil';
 

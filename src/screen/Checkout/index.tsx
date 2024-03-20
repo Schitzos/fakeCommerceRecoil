@@ -7,7 +7,7 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import React from 'react';
 import {ScrollView, View} from 'react-native';
 import {styles} from './styles';
-import {useCart} from '@/hooks/useCartState';
+import {useCart} from '@/hooks/useCart';
 
 type CheckoutScreenProps = {
   route: any;

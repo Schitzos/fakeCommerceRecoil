@@ -5,7 +5,7 @@ import {DrawerActions, useNavigation} from '@react-navigation/native';
 import theme from '@/theme';
 import TextView from '../TextView';
 import {styles} from './styles';
-import {useCart} from '@/hooks/useCartState';
+import {useCart} from '@/hooks/useCart';
 
 export default function Cart() {
   const navigation = useNavigation();
