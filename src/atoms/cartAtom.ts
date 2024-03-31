@@ -27,7 +27,7 @@ const asyncStorageEffect: AsyncStorageEffect =
     });
   };
 
-export const cartState = atom<ProductItemProps[]>({
+export const cartAtom = atom<ProductItemProps[]>({
   key: 'Cart',
   default: [],
   effects: [asyncStorageEffect('cart-data')],

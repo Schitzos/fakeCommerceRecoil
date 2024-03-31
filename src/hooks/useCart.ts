@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import {ProductItemProps} from '@/types/Product';
 import {useRecoilValue, useSetRecoilState} from 'recoil';
-import {cartState} from '@/atoms/cartState';
+import {cartAtom} from '@/atoms/cartAtom';
 
 interface UseCartResult {
   cart: ProductItemProps[];
@@ -13,8 +13,8 @@ interface UseCartResult {
 }
 
 export function useCart(): UseCartResult {
-  const cart = useRecoilValue(cartState);
-  const setCart = useSetRecoilState(cartState);
+  const cart = useRecoilValue(cartAtom);
+  const setCart = useSetRecoilState(cartAtom);
   const addToCart = (newItem: ProductItemProps) => {
     const updatedCart = [...cart];
     const existingProductIndex = updatedCart.findIndex(

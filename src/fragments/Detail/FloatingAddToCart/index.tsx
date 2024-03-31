@@ -10,7 +10,7 @@ import {
   useNavigation,
 } from '@react-navigation/native';
 import {useRecoilValue, useSetRecoilState} from 'recoil';
-import {counterState} from '@/atoms/counterState';
+import {counterAtom} from '@/atoms/counterAtom';
 import {useCart} from '@/hooks/useCart';
 
 type FloatingAddToCartProps = {
@@ -19,8 +19,8 @@ type FloatingAddToCartProps = {
 
 export default function FloatingAddToCart({data}: FloatingAddToCartProps) {
   const {cart, addToCart} = useCart();
-  const count = useRecoilValue(counterState);
-  const setCount = useSetRecoilState(counterState);
+  const count = useRecoilValue(counterAtom);
+  const setCount = useSetRecoilState(counterAtom);
   const productOnCart = cart.find(val => val.id === data.id);
   const navigation = useNavigation();
 

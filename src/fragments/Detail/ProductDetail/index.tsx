@@ -5,15 +5,15 @@ import {ScrollView, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {styles} from './styles';
 import {useRecoilValue, useSetRecoilState} from 'recoil';
-import {counterState} from '@/atoms/counterState';
+import {counterAtom} from '@/atoms/counterAtom';
 
 type ProductDetailProps = {
   data: any;
 };
 
 export function ProductDetail({data}: ProductDetailProps) {
-  const count = useRecoilValue(counterState);
-  const setCount = useSetRecoilState(counterState);
+  const count = useRecoilValue(counterAtom);
+  const setCount = useSetRecoilState(counterAtom);
 
   console.log('render product detail');
   return (
